@@ -126,6 +126,7 @@ def main(screen):
 
             if cursor > 0:
                 text = text[:cursor - 1] + text[cursor:]
+            cursor -= 1
 
         # ----------------------------------------
 
