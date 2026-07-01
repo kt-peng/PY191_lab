@@ -179,7 +179,7 @@ def main(screen):
 
         elif 32 <= key <= 126:
 
-            text = text[:cursor] + chr + text[cursor:]
+            text = text[:cursor] + chr(key) + text[cursor:]
             cursor += 1
 
         # ----------------------------------------
