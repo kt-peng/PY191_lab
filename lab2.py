@@ -124,9 +124,8 @@ def main(screen):
 
         elif key in (8, 127, curses.KEY_BACKSPACE):
 
-            ...
-
-            display = ...
+            if cursor > 0:
+                text = text[:cursor - 1] + text[cursor:]
 
         # ----------------------------------------
 
@@ -151,9 +150,8 @@ def main(screen):
 
         elif key == 10:
 
-            ...
-
-            display = ...
+            text = text[:cursor] + "\n" + text[cursor:]
+            cursor += 1
 
         # ----------------------------------------
 
@@ -180,9 +178,8 @@ def main(screen):
 
         elif 32 <= key <= 126:
 
-            ...
-
-            display = ...
+            text = text[:cursor] + chr + text[cursor:]
+            cursor += 1
 
         # ----------------------------------------
 
